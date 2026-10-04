@@ -1,6 +1,6 @@
 /**
  * @file lv_conf.h
- * Configuration file for v10.0.0
+ * Configuration file for v9.6.0
  */
 
 /*
@@ -138,7 +138,7 @@
  *  - LV_COLOR_FORMAT_ARGB8888
  *  - LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED
  */
-#define LV_COLOR_FORMAT_DEFAULT LV_COLOR_FORMAT_RGB565
+#define LV_COLOR_FORMAT_DEFAULT LV_COLOR_FORMAT_XRGB8888
 
 /** 0: no adjustment, get the integer part of the result (round down)
  *  64: round up from x.75
@@ -214,11 +214,11 @@
 #define LV_USE_SNAPSHOT 0
 
 /** Backend that gives the SW renderer vector graphics support. */
-#define LV_USE_THORVG 0
+#define LV_USE_THORVG 1 
 
 #if LV_USE_THORVG
 /** Build the ThorVG copy shipped with LVGL instead of linking an external one. */
-#define LV_USE_THORVG_INTERNAL 1 
+#define LV_USE_THORVG_INTERNAL 1
 
 #endif /*LV_USE_THORVG*/
 
@@ -736,7 +736,7 @@
 #define LV_USE_OBJ_NAME 1
 
 /** Widget id (lv_obj_set_id) */
-#define LV_USE_OBJ_ID 1
+#define LV_USE_OBJ_ID 0
 
 #if LV_USE_OBJ_ID
 /** Automatic ID assignment on widget creation */
